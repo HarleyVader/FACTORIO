@@ -1,0 +1,13 @@
+[Unit]
+Description=Melkaneas Factorio Server Load Laterst Savegame
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+User=factorio
+ExecStart=/home/factorio/factorio/bin/x64/factorio --start-server-load-latest
+
+[Install]
+WantedBy=multi-user.target
